@@ -1,0 +1,820 @@
+/* Animations */
+
+/* Loading spinner */
+
+.container-loading {
+    width: 100%;
+    height: 100%;
+    background-color: #dddddd;
+}
+
+.loading {
+    display: flex;
+}
+
+.loading::after {
+    top: 50%;
+    left: 50%;
+    bottom: 50%;
+    right: 50%;
+    content: "";
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    border: 10px solid #9356DC;
+    border-top-color: #99E2D0;
+    border-radius: 50%;
+    animation: loading 0.6s linear forwards 3;
+}
+
+.content {
+  opacity: 0;
+  animation: opacity 3s forwards ;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loading {
+
+0% {
+opacity: 1
+}
+
+33% {
+opacity: 0.8;
+transform: rotate(1turn);
+}
+    50% {
+        opacity: 0.5;
+        transform: rotate(1turn);
+    }
+
+    100% {
+        transform: rotate(2turn);
+        opacity: 0
+    }
+}
+
+/* Géneral */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+a {
+    text-decoration: none;
+    color: black;
+} 
+                
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* header */
+
+.en-tete {
+    display: flex;
+    flex-direction: column;
+}
+
+#logo {
+    width: 25%;
+    padding-top: 3%;
+    padding-left: 5%;
+}
+
+form {
+    padding-left: 5%;
+    display: flex;
+    margin-top: 5%;
+    height: 50px;
+    align-items: center;
+
+}
+
+#recherche {
+    border: none;
+    padding-left: 4%;
+}
+
+/* Formulaire */
+
+form input {
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: -10%;
+}
+
+form label i {
+    font-size: 1.2em;
+    display: flex;
+   
+}
+
+/* Réservations */
+
+.en-tete__reservation {
+background:#ececec;
+}
+
+.en-tete__reservation h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    margin-top: 3%;
+    margin-left: 0;
+    text-align: center;
+}
+
+.en-tete__reservation p {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: #787878;
+    font-size: 1.2em
+}
+
+.container_bouton {
+  width: fit-content;
+  margin: 3% auto;
+}
+
+.container_bouton .bouton_commander {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem ;
+  background: linear-gradient(-8deg, #9356DC, #FF79DA);
+  border-radius: 40px;
+  display: block;
+  box-shadow: 5px 5px 10px #585757;
+}
+  .bouton_commander:hover {
+  filter: brightness(110%);
+  box-shadow: 5px 5px 10px darken(#585757, 50%);
+  transition: 0.2s
+}
+
+/* Section Fonctionnement */
+
+ .fonctionnement h2 { 
+     margin-top: 5%;
+     font-size: 25px;
+     font-weight: bold;
+     align-content: center;
+     text-align: center;
+ }
+
+ .bloc-fonctionnement {
+     padding-bottom: 50px;
+     padding-top: 2%;
+     display: flex;
+     justify-content: space-around;
+   
+ }
+ .fonctionnement-choix {
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     background:#ececec;
+     border-radius: 30px;
+     margin: 10px 20px 15px 25px;
+     box-shadow: 2px 2px 7px #d3d3d3;
+     height: 80px;
+ }
+
+ .fonctionnement-choix__rond {
+     position: relative;
+     margin-left: -10px;
+     height: 27px;
+     width: 27px;
+     background: #9356DC;
+     border-radius: 20px;
+ }
+
+ .fonctionnement-choix.fas { 
+     width: 40px;
+     height: 40px;
+     color: #636363cc;
+     margin-left: 30%;
+
+ }
+ .fonctionnement-choix__numero {
+     margin: 4px 0 0 9px;
+     font-weight: bold;
+     color: white;
+ }
+
+ .fonctionnement-choix__texte {
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
+     align-content: center;
+     font-size: 1em;
+     padding: 27px;
+     margin: 0;
+ }
+ .fonctionnement-choix__espace {
+    margin-right: 20px;
+ }
+
+ .fonctionnement-choix:hover {
+     background:#f2eafb;
+     box-shadow: 2px 2px 7px darken(#d3d3d3, 50%);
+     transition: 0.2s
+ }
+
+ /* Section Restaurants */
+
+ .restaurants {
+    width: 100%;
+ }
+
+  .bloc-restaurants {
+    width: 100%;
+    padding-bottom: 50px;
+    display: flex;
+ }
+
+ .restaurants h2 {
+    padding-top: 3%;
+    padding-left: 3%;
+    margin-bottom: 2%;
+ }
+
+ .bloc-restaurants__liste {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .bloc-restaurants__resultat {
+    align-items: center;
+    position: relative;
+    height: 150px;
+    width: 100%;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 2px 2px 7px #d3d3d3;
+    justify-content: space-between;
+    block-size: auto;
+ }
+
+ .bloc-restaurants__resultat img {
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+ }
+
+ .description-restaurant h3 {
+    margin: 15px 0px 5px 15px ;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+ }
+
+.lieu-restaurant { 
+    margin: 10px 0px 15px 15px ;
+    padding-bottom: 15px;
+    font-weight: normal;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.nouveau {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: #99e2D0;
+    border-radius: 2px;
+}
+
+.nouveau-titre { 
+    display: block;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #4D855F;
+    padding: 8px;  
+}
+
+.coeur {
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+    opacity: 1;  
+    font-size: 20px;
+}
+
+.coeur:hover .fa-solid, .coeur:active .fa-solid {
+  transition: transform;
+  transform: scale(1);
+  transition: transform 1000ms;
+  background: linear-gradient(to top left, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.coeur:hover .far, .coeurt:active .far {
+  background: linear-gradient(to top left, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.coeur .fa-solid {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  transform: scale(0);
+}
+
+/* footer*/
+
+footer {
+  width: 100%;
+  background: #353535;
+}
+
+.bas-de-page {
+  width: 90%;
+  margin: auto;
+  padding-top: 1%;
+}
+
+footer h4 {
+  padding-top: 10px;
+  font-family: "Shrikhand", cursive;
+  align-content: center;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.bas-de-page__bloc {
+    display: flex;
+    align-content: space-between;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.bloc__text {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    margin-top: 1%;
+    padding-bottom: 3%;
+}
+
+.bloc__text a {
+  margin-bottom: 2%;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.bloc__text i {
+    margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+
+/* Général */
+
+body {
+    overflow-x: hidden;
+    width: 100%; 
+    margin: auto; 
+}
+
+/* header */
+
+#logo {
+    padding-top: 3%;
+    justify-content: center;
+    width: 45%;
+    margin: auto;
+    text-align: center;
+}
+
+.en-tete {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    padding-right: 0;
+    flex-direction: column;  
+}
+
+form {
+    display: flex;
+    margin-top: 3%;
+    height: 50px;
+    justify-content: center;
+    background-color: #EAEAEA;
+    width: 100%;
+    align-items: center;
+    border-top: lightgrey solid;
+}
+
+#recherche {
+    background-color: #EAEAEA;
+    border: none;
+    padding-left: 4%;
+}
+
+form input {
+    font-size: 1em;
+    color: #464748;
+    font-weight: bold;
+    margin-right: -10%;
+}
+
+form label i {
+    font-size: 1.2em;
+    display: flex;
+    color: black;
+}
+
+/* Réservations */
+
+.en-tete__reservation {
+    background-color: #F6F5F6;
+}
+
+.en-tete__reservation h1 {
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 8%
+}
+
+.en-tete__reservation p {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: #666767;
+    font-size: 1.2em
+}
+
+.container_bouton {
+  width: fit-content;
+  margin: 10% auto;
+}
+
+.container_bouton .bouton_commander {
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem ;
+  background: linear-gradient(-8deg, #9356DC, #FF79DA);
+  border-radius: 40px;
+  display: block;
+  box-shadow: 5px 5px 10px #A3A4A4;
+}
+
+.container_bouton .bouton_commander:hover {
+  filter: brightness(110%);
+  box-shadow: 5px 5px 10px #898989;
+  transition: 0.5s;
+}
+
+header {
+    background-color: #F5F5F5;
+    padding-bottom: 5%;
+}
+
+/* Section Fonctionnement */
+
+ .fonctionnement h2 { 
+     font-size: 25px;
+     font-weight: bold;
+     padding: 50px 0 20px 20px;
+     margin: 0;
+     text-align: left;
+ }
+
+ .bloc-fonctionnement {
+     padding-bottom: 50px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+   
+ }
+ .fonctionnement-choix {
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     background:#ececec;
+     border-radius: 30px;
+     margin: 10px 20px 15px 25px;
+     box-shadow: 2px 2px 7px #d3d3d3;
+     height: 60px;
+ }
+
+ .fonctionnement-choix__rond {
+     position: relative;
+     margin-left: -10px;
+     height: 27px;
+     width: 27px;
+     background: #9356DC;
+     border-radius: 20px;
+ }
+
+ .fonctionnement-choix.fas { 
+     width: 40px;
+     height: 40px;
+     color: #636363cc;
+     margin-left: 30%;
+
+ }
+
+ .fonctionnement-choix__numero {
+     margin: 4px 0 0 9px;
+     font-weight: bold;
+     color: white;
+ }
+
+ .fonctionnement-choix__texte {
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
+     align-content: center;
+     font-size: 1em;
+     padding: 27px;
+     margin: 0;
+ }
+
+ .fonctionnement-choix__espace {
+    margin-right: 20px;
+ }
+
+ .fonctionnement-choix:hover {
+     background:#f2eafb;
+ }
+
+ /* Section Restaurants */
+
+ .restaurants {
+    width: 100%;
+    background-color: #F6F5F6;
+    flex-direction: column;
+    display: block;
+    justify-content: space-around;
+ }
+
+ .bloc-restaurants__liste {
+    display: flex;
+    flex-direction: column;
+ }
+
+ .restaurants h2 {
+    padding-top: 10%;
+    padding-left: 5%;
+    margin-bottom: 2%;
+ }
+
+  .bloc-restaurants {
+    width: 100%;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ }
+
+ .bloc-restaurants__resultat {
+    position: relative;
+    background: white;
+    height: 150px;
+    width: 90%;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 2px 2px 7px #d3d3d3;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    block-size: auto;
+ }
+
+ .bloc-restaurants__resultat img {
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+ }
+
+ .description-restaurant h3 {
+    margin: 15px 0px 5px 15px ;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+ }
+
+.lieu-restaurant { 
+    margin: 10px 0px 15px 15px ;
+    padding-bottom: 15px;
+    font-weight: normal;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.nouveau {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: #99e2D0;
+    border-radius: 2px;
+}
+
+.nouveau-titre { 
+    display: block;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #4D855F;
+    padding: 8px;  
+}
+
+.coeur {
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+    opacity: 1;  
+    font-size: 20px;
+}
+
+/* footer*/
+
+footer {
+  width: 100%;
+  position: relative;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #353535;
+}
+
+.bas-de-page {
+  width: 90%;
+  margin: auto;
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+
+.bas-de-page__bloc {
+    display: flex;
+    flex-direction: column;
+}
+
+footer h4 {
+  text-align: left;
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  padding-left: 0;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 5px
+}
+
+.bloc__text {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  list-style: none;
+  padding-left: 0;
+}
+
+.bloc__text a {
+  margin-bottom: 2%;
+  text-decoration: none;
+  color: white;
+}
+
+.bloc__text i {
+  margin-right: 0.5rem;
+}
+
+ }
+
+ @media screen and (max-width: 992px) and (min-width: 769px) {
+
+    .body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+/* Fonctionneemnt */
+
+.fonctionnement-choix__rond {
+     position: relative;
+     margin-left: -10px;
+     height: 23px;
+     width: 30px;
+     background: #9356DC;
+     border-radius: 10px;
+ }
+
+/* Restaurant */
+ 
+ .bloc-restaurants {
+    width: 100%;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ 
+ }
+
+ .bloc-restaurants__resultat {
+    position: relative;
+    background: white;
+    width: 90%;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 2px 2px 7px #d3d3d3;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    block-size: auto;
+    min-height: 180px;
+    max-height: 180px;
+
+ }
+
+ .bloc-restaurants__resultat img {
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+    object-fit: cover;
+ }
+
+ .description-restaurant h3 {
+    margin: 15px 0px 5px 15px ;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+ }
+
+.lieu-restaurant { 
+    margin: 10px 0px 15px 15px ;
+    padding-bottom: 15px;
+    font-weight: normal;
+    font-size: 1em;
+    text-decoration: none;
+  }
+
+  .nouveau {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #99e2D0;
+    border-radius: 2px;
+}
+
+.nouveau-titre { 
+    display: block;
+    font-size: 0.7rem;
+    text-align: center;
+    color: #4D855F;
+    padding: 8px;  
+}
+
+.coeur {
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    opacity: 1;  
+    font-size: 15px;
+}
+ }
